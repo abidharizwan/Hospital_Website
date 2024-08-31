@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}
+About Us
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/medstar.webp' %}" class="d-block w-100" alt="About MedStar Hospital 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/med4.jpg' %}" class="d-block w-100" alt="About MedStar Hospital 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/med3.jpg' %}" class="d-block w-100" alt="About MedStar Hospital 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- About Us Section -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>About MedStar Hospital</h2>
+            <p>Welcome to MedStar Hospital, where your health and well-being are our top priorities. Established with the mission to provide exceptional healthcare services, MedStar Hospital has been at the forefront of medical innovation and patient care.</p>
+            <p>Our state-of-the-art facility is equipped with the latest medical technology and staffed by a team of highly skilled and compassionate professionals. We offer a wide range of medical services, including emergency care, specialized treatments, and preventive health programs.</p>
+            <p>At MedStar Hospital, we believe in a patient-centered approach, ensuring that every patient receives personalized care tailored to their unique needs. Our dedicated team of doctors, nurses, and support staff work collaboratively to deliver the highest standard of care and support.</p>
+            <p>We are committed to making a positive impact in the community by providing not only excellent medical services but also by engaging in various outreach programs and health education initiatives.</p>
+        </div>
+    </div>
+   
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Our Mission</h3>
+            <p>Our mission is to provide comprehensive and compassionate healthcare to our patients and to improve the health of the communities we serve. We strive to deliver high-quality, accessible, and affordable medical services while fostering a culture of excellence and continuous improvement.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Compassion:</strong> We treat each patient with empathy, kindness, and respect.</li>
+                <li><strong>Integrity:</strong> We adhere to the highest ethical standards in all our interactions.</li>
+                <li><strong>Excellence:</strong> We are committed to providing the best possible care through continuous learning and innovation.</li>
+                <li><strong>Collaboration:</strong> We work together as a team to achieve the best outcomes for our patients.</li>
+                <li><strong>Community:</strong> We are dedicated to improving the health and well-being of the communities we serve.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+.full-width-image-wrapper {
+    width: 100%;
+    overflow: hidden; /* Ensures image doesn’t overflow */
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 2rem; /* Space below the image */
+}
+
+.full-width-image {
+    width: 100%; /* Ensure image takes up full container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+}

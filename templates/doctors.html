@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title%}
+Doctors
+{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Meet  Our Doctors</h1>
+
+<div class="container text-center bg-dark">
+    {% for d in doctors %}
+    
+    <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+        <img src="{{d.doc_image.url}}" class="card-img-top uniform-img" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Dr. {{d.doc_name}}</h5>
+            <p class="card-text">{{d.doc_spec}}</p>
+            <h6>{{d.dep_name}} Department</h6>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+<style>
+    .uniform-card {
+        width: 18rem; /* Fixed width for all cards */
+        height: 100%; /* Ensures the height will adjust based on content */
+        display: inline-block;
+        margin-bottom: 1rem; /* Space between cards */
+    }
+    
+    .uniform-img {
+        width: 50%; /* Ensures image covers the width of the card */
+        height: 200px; /* Fixed height for the image */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        text-align: center; /* Center text */
+    }
+</style>
+
+{% endblock %}

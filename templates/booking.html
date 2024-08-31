@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %} 
+
+
+{% block title%}
+Booking
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center"> Make an Appoinment</h1>
+<hr>
+<div class="container w-25 text-center my-5 bg-light">
+
+    {% comment %} if here post method should include csrf token {% endcomment %}
+    <form action="" method="POST"> 
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br>
+    </form>
+</div>
+
+{% endblock %}
